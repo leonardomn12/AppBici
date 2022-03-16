@@ -8,7 +8,6 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -21,17 +20,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppBici">
         <activity
+            android:name=".controlnfc.Menu"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
-            android:exported="true"/>
-        <activity android:name=".controlnfc.Intro" android:exported="true">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-
-                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
             </intent-filter>
         </activity>
+        <activity android:name=".controlnfc.Acceso" />
     </application>
 
 </manifest>
